@@ -1,9 +1,9 @@
 <template>
   <div>
     <ShowMoney>
-      <span slot="title_slot" class="title">总收入</span>
+      <span slot="title_slot" class="title">Total Income</span>
       <span slot="pay_slot" class="pay">￥{{incomeAll}}</span>
-      <span slot="count_slot" class="count">共{{$store.getters.income.length}}条收入项目</span>
+      <span slot="count_slot" class="count">Total {{$store.getters.income.length}} Income</span>
     </ShowMoney>
     <Chart :options="Option"/>
   </div>

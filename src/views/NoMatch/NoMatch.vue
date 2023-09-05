@@ -1,7 +1,7 @@
 <template>
   <div>
     Not Fount...
-    <router-link to="/home">返回首页</router-link>
+    <router-link to="/home">return home</router-link>
   </div>
 </template>
 

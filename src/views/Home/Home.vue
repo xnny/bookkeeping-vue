@@ -1,9 +1,9 @@
 <template>
   <Layout name="TODAY">
     <ShowMoney>
-      <span slot="title_slot" class="title">今日支出</span>
-      <span slot="pay_slot" class="pay">￥ {{expenses}}</span>
-      <span slot="income_slot" class="income">本月收入 ￥ {{income}}</span>
+      <span slot="title_slot" class="title">spending today</span>
+      <span slot="pay_slot" class="pay">$ {{expenses}}</span>
+      <span slot="income_slot" class="income">income this month $ {{income}}</span>
     </ShowMoney>
     <money-key/>
   </Layout>

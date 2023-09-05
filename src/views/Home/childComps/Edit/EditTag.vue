@@ -1,21 +1,21 @@
 <template>
   <div class="edit_tag_wrapper">
     <TopNav name="back">
-      <span slot="title">{{id === '9999' ? '新建分类' : '编辑分类'}}</span>
+      <span slot="title">{{id === '9999' ? 'New' : 'Edit'}}</span>
     </TopNav>
     <section class="input_tag">
       <TypeSection @getCategory="getCategory" />
       <label v-if="id !== '9999' ">
         <Icon :iconName="iconName === '9999' ? tag.iconName : iconName"/>
         <input type="text"
-               placeholder="请输入分类类型(不超过四个字)"
+               placeholder="Please enter the classification type"
                v-model="value"
         />
       </label>
       <label v-if="id === '9999' ">
         <Icon :iconName="iconName"/>
         <input type="text"
-               placeholder="请输入分类类型(不超过四个字)"
+               placeholder="Please enter category type"
                v-model="value"
         />
       </label>
@@ -29,11 +29,11 @@
     </section>
     <section>
       <div class="button_tag" v-if="id === '9999'">
-        <button class="save" @click="addNewTag">添加新标签</button>
+        <button class="save" @click="addNewTag">add New Tag</button>
       </div>
       <div class="button_tag" v-else>
-        <button class="save" @click="saveTag">保存标签</button>
-        <button class="delete" @click="deleteOneTag">删除标签</button>
+        <button class="save" @click="saveTag">save Tag</button>
+        <button class="delete" @click="deleteOneTag">delete One Tag</button>
       </div>
     </section>
   </div>
@@ -80,10 +80,10 @@
         const newIconName = this.iconName !== '9999' ? this.iconName : this.tag.iconName;
         const id = this.tag.id, name = this.value, iconName = newIconName, mold = this.mold;
         this.$store.commit('updateTag', {id, name, iconName, mold});
-        window.alert('添加成功');
+        window.alert('Added successfully');
         this.$router.go(-1);
       } else {
-        window.alert('不能输入空的标签以及输入的汉字不能超过四个！');
+        window.alert('Empty tags cannot be entered and no more than four characters can be entered.');
         this.value = '';
       }
     }
@@ -93,15 +93,15 @@
         const name = this.value, iconName = this.iconName, mold = this.mold;
         for (let i = 0; i < this.tags.length; i++) {
           if (name === this.tags[i].name) {
-            window.alert('标签名重复');
+            window.alert('Duplicate tag name');
             return;
           }
         }
         this.$store.commit('createTag', {name, iconName, mold});
-        window.alert('添加成功');
+        window.alert('Added successfully');
         this.$router.go(-1);
       } else {
-        window.alert('不能输入空的标签以及输入的汉字不能超过四个！');
+        window.alert('Empty tags cannot be entered and no more than four characters can be entered.');
       }
     }
 
@@ -109,7 +109,7 @@
     deleteOneTag() {
       if (this.tag) {
         this.$store.commit('removeTag', this.tag.id);
-        window.alert('删除成功');
+        window.alert('successfully deleted');
         this.$router.go(-1);
       }
     }

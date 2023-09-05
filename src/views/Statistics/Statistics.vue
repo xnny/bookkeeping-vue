@@ -1,15 +1,15 @@
 <template>
-  <Layout name="统计">
+  <Layout name="statistics">
     <div class="sta_wrapper">
       <ul>
-        <li :class="{selected:title === '概览'}" @click="setTextTitle('概览')">
-          <router-link to="/statistics/overview">概览</router-link>
+        <li :class="{selected:title === 'Overview'}" @click="setTextTitle('Overview')">
+          <router-link to="/statistics/overview">Overview</router-link>
         </li>
-        <li :class="{selected:title === '支出'}" @click="setTextTitle('支出')">
-          <router-link to="/statistics/expenses">支出分析</router-link>
+        <li :class="{selected:title === 'Expenditure'}" @click="setTextTitle('Expenditure')">
+          <router-link to="/statistics/expenses">Expenditure analysis</router-link>
         </li>
-        <li :class="{selected:title === '收入'}" @click="setTextTitle('收入')">
-          <router-link to="/statistics/income">收入分析</router-link>
+        <li :class="{selected:title === 'Income'}" @click="setTextTitle('Income')">
+          <router-link to="/statistics/income">Income analysis</router-link>
         </li>
       </ul>
     </div>
@@ -25,7 +25,7 @@
 
   @Component
   export default class Statistics extends Vue {
-    title = '概览';
+    title = 'Overview';
 
     setTextTitle(newTitle: string) {
       this.title = newTitle;

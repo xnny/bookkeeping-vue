@@ -15,7 +15,7 @@
             </div>
             <div class="center">
               <span class="nameSpan">{{$store.getters.getItemName(item.tagIds[0])}}</span>
-              <span class="noteSpan">{{item.note || '无备注'}}</span>
+                <span class="noteSpan">{{item.note || 'no remarks'}}</span>
             </div>
             <div class="right">
               <span class="amountSpan">￥{{item.amount}}</span>

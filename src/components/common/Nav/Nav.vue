@@ -10,13 +10,13 @@
       <li>
         <router-link to="/detail" active-class="selected">
           <Icon iconName="detail"/>
-          明细
+          Details
         </router-link>
       </li>
       <li>
         <router-link to="/statistics" active-class="selected">
           <Icon iconName="statistics"/>
-          统计
+          Statistics
         </router-link>
       </li>
     </ul>

@@ -1,9 +1,9 @@
 <template>
   <div>
     <ShowMoney>
-      <span slot="title_slot" class="title">共支出</span>
+      <span slot="title_slot" class="title">Total Expenditure</span>
       <span slot="pay_slot" class="pay">￥{{expensesALL}}</span>
-      <span slot="count_slot" class="count">共{{$store.getters.expenses.length}}条支出项目</span>
+      <span slot="count_slot" class="count">Total {{$store.getters.expenses.length}} Expenditure</span>
     </ShowMoney>
     <Chart :options="Option"/>
   </div>

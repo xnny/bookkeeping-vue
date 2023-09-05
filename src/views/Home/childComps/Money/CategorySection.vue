@@ -1,9 +1,9 @@
 <template>
   <div class="category-wrapper">
     <span class="span-item" :class="{[classPrefix+'-item']:classPrefix,selected:type === '-'}"
-          @click="selectType('-')">支出</span>
+          @click="selectType('-')">expenditure</span>
     <span class="span-item" :class="{[classPrefix+'-item']:classPrefix,selected:type === '+'}"
-          @click="selectType('+')">收入</span>
+          @click="selectType('+')">income</span>
   </div>
 </template>
 

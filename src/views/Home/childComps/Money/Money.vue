@@ -34,7 +34,7 @@
       tagIds: [], // 标签
       note: '',  // 备注
       createdAt: new Date().toISOString(), //日期
-      category: '-', // 收入/支出
+      category: '-', // Income/Expenditure
       amount: 0  // 总和
     };
 

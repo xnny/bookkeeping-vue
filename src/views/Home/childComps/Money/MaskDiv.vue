@@ -3,13 +3,13 @@
     <div class='box'>
       <div class='title'>
         <Icon iconName='占位'/>
-        <span>记账备注</span>
+        <span>Accounting notes</span>
         <span @click="closeMask"><Icon iconName='close'/></span>
       </div>
       <label class='main'>
-        <span>输入备注：</span>
+        <span>Enter remarks</span>
         <textarea v-model="notes"/>
-        <button @click="sureText(notes)">确定</button>
+        <button @click="sureText(notes)">Sure</button>
       </label>
     </div>
   </div>

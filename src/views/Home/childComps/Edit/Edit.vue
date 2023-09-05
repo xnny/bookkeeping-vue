@@ -1,7 +1,7 @@
 <template>
   <div class="edit-wrapper">
     <TopNav name="back">
-      <span slot="title">分类管理</span>
+      <span slot="title">Management</span>
     </TopNav>
     <TypeSection @getCategory="getCategory"/>
     <section class="tags-list">
@@ -19,7 +19,7 @@
     </section>
     <section class="add_tag">
       <router-link :to="`${$route.path}/9999`">
-        添加类别
+        Add category
       </router-link>
     </section>
     <router-view/>

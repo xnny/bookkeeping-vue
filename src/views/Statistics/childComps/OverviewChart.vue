@@ -3,7 +3,7 @@
     <div class="show_money">
               <span class="titleWrapper">
                 <Icon iconName="chart"/>
-                支出和收入
+                Expenditure And Income
               </span>
     </div>
     <Chart :options="Option"/>
@@ -59,7 +59,7 @@
           lineStyle: 'line'
         },
         legend: {
-          data: ['支出', '收入'],
+          data: ['Expenditure', 'Income'],
           bottom: 0,
           itemWidth: 50,
           itemHeight: 2
@@ -85,9 +85,9 @@
         ],
         series: [
           {
-            name: '支出',
+            name: 'Expenditure',
             type: 'line',
-            stack: '总量',
+            stack: 'total amount',
             smooth: true,
             lineStyle: {
               width: 3,
@@ -103,9 +103,9 @@
             data: valuesExpenses
           },
           {
-            name: '收入',
+            name: 'Income',
             type: 'line',
-            stack: '总量',
+            stack: 'total amount',
             smooth: true,
             lineStyle: {
               width: 3,

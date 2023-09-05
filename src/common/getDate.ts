@@ -1,6 +1,6 @@
 type getName = (id: string) => string;
 const getData = (moneyType: RecordItem[], moneyAll: number, fn: getName) => {
-  // 获得支出/收入的ID，根据ID来选出 标签名 和 amount
+  // 获得Expenditure/Income的ID，根据ID来选出 标签名 和 amount
   const moneyTypeID = moneyType.map(item => item.tagIds);
   const moneyAmount = moneyType.map(item => item.amount);
   const arrayName = [];

@@ -5,7 +5,7 @@
       <button>1</button>
       <button>2</button>
       <button>3</button>
-      <button class="today">清零</button>
+      <button class="today">Reset</button>
       <button>4</button>
       <button>5</button>
       <button>6</button>
@@ -15,7 +15,7 @@
       <button>9</button>
       <button>-</button>
       <button>0</button>
-      <button>删除</button>
+      <button>delete</button>
       <button class="complete" >{{result}}</button>
     </section>
   </div>
@@ -32,7 +32,7 @@
     output = this.amount.toString();
 
     get result() {
-      return this.output.indexOf('+') >= 0 || this.output.indexOf('-') >= 0 ? '=' : '完成';
+      return this.output.indexOf('+') >= 0 || this.output.indexOf('-') >= 0 ? '=' : 'finish';
     }
 
     getButton(event: MouseEvent) {
@@ -40,7 +40,7 @@
       if (text === null) return;
       this.output = generateOutput(text, this.output);
       this.$emit('update:value', parseFloat(this.output));
-      if(text === '完成'){
+      if(text === 'finish'){
         this.$emit('onSubmit')
         this.output = '0'
       }

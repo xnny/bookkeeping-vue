@@ -11,7 +11,7 @@ const computeResult = (output: string) => {
     } else if (symOne === '-') {
       sum -= num;
       if(sum < 0){
-        alert('不能为负数')
+        alert('cannot be negative')
         sum = 0
       }
     }
@@ -42,17 +42,17 @@ const generateOutput = (text: string, output: string) => {
     case'-':
       if (output[output.length - 1] === '+' || output[output.length - 1] === '-') return output;
       return output + '-';
-    case'删除':
+    case'delete':
       if (output.length === 1) {
         return '0';
       } else {
         return output.slice(0, -1) || '0';
       }
-    case '清零':
+    case 'clear':
       return '0';
     case '=':
       return computeResult(output) + '';
-    case '完成':
+    case 'finish':
       return output;
     default:
       return '0';

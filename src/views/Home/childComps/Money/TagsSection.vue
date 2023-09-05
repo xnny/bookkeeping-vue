@@ -12,7 +12,7 @@
         <Icon iconName="set"/>
         <span>
           <router-link :to="`${$route.path}/edit`">
-            <span>设置</span>
+            <span>set up</span>
           </router-link>
          </span>
       </li>
