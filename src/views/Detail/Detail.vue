@@ -1,5 +1,5 @@
 <template>
-  <Layout name="明细">
+  <Layout name="Details">
     <TypeSection @getCategory="getCategory"/>
     <section class="icon_div" v-if="groupList.length === 0">
       <Icon iconName="none"/>
